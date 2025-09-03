@@ -1,10 +1,10 @@
-module portdeclaration_pre2001_tb;
+module portdeclaration_post2001_tb;
    reg p,q;
    wire y;
-   portdeclaration_pre2001 uut(.a(p),.b(q),.y(y)); //named association
+   portdeclaration_post2001 uut(y,p,q); //positional association
    initial begin
    $dumpfile("dump.vcd");
-   $dumpvars(0, portdeclaration_pre2001_tb);
+   $dumpvars(0, portdeclaration_post2001_tb);
    end
    initial begin
      $monitor("a=%b b=%b y=%b", p, q, y);
