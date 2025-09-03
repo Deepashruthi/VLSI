@@ -1,6 +1,6 @@
 module SignedvsUnsigned;
   reg signed [7:0] s;  
-  reg [7:0] u;         
+  reg [7:0] u; //Default unsigned  
 
   initial begin
     s = -25;
