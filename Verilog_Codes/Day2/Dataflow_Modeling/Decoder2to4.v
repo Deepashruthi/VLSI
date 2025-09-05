@@ -1,10 +1,6 @@
 module Decoder2to4(
-    input a,
-    input b,
-    output d0,
-    output d1,
-    output d2,
-    output d3);
+    input a,b,
+    output d0,d1,d2,d3);
 
   assign d0 = ((~a) & (~b));
   assign d1 = ((~a) & b);
