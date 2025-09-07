@@ -1,6 +1,7 @@
 module comparator(
   output Eq, Less, Greater,
   input [1:0] a,b);
+  wire x0, x1, x2, x3;
   wire w0, w1;
   wire nb0, nb1;
   wire na0, na1;
@@ -13,8 +14,12 @@ module comparator(
   not(nb1, b[1]);
 
     //Equality output
-  xnor(w0, a[0], b[0]);
-  xnor(w1, a[1], b[1]);
+  and(x0, na0, nb0);
+  and(x1, a[0], b[0]);
+  and(x2, na1, nb1);
+  and(x3, a[1], b[1]);
+  or(w0, x0, x1);
+  or(w1, x2, x3);
   and(Eq, w0, w1);
 
     //Lesser output
