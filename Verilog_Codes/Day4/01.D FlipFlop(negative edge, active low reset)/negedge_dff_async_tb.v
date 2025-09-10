@@ -18,8 +18,8 @@ module neg_dff_async_reset_tb;
     end
 
     initial begin
-	$dumpfile("neg_dff_async_reset.vcd");
-	$dumpvars;
+	    $dumpfile("neg_dff_async_reset.vcd");
+	    $dumpvars;
         $monitor("Time=%0t | clk=%b reset=%b d=%b | q=%b",
                   $time, clk, reset, d,q);
     end
