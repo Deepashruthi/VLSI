@@ -18,7 +18,7 @@ module neg_dff_sync_reset_tb;
     end
 
     initial begin
-	$dumpfile("neg_dff_sync_reset.vcd");
+	    $dumpfile("neg_dff_sync_reset.vcd");
         $dumpvars;
         $monitor("Time=%0t | clk=%b reset=%b d=%b | q=%b",
                   $time, clk, reset, d,q);
