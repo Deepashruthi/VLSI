@@ -1,5 +1,5 @@
 module toggle1bit;
-  reg sig;
+reg sig;
 
   initial begin
     sig = 0;
