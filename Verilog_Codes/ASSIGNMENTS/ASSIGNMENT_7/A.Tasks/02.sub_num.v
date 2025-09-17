@@ -9,7 +9,7 @@ module sub_num;
   endtask
 
   initial begin
-    $monitor("Time=%t | A=%b(%d) | B=%b(%d)| Sum=%b(%d)" ,$time,A,A,B,B,Sub,Sub);
+    $monitor("Time=%t | A=%b(%d) | B=%b(%d)| Sub=%b(%d)" ,$time,A,A,B,B,Sub,Sub);
     A=8'd15; B=8'd45;
     sum_task(A,B,Sub);
     #10;A=8'd13; B=8'd12;
