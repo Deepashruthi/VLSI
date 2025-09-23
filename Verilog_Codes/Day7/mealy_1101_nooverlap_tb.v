@@ -8,7 +8,7 @@ module mealy_1101_nooverlap_tb;
   always #5 clk = ~clk;
     
   initial begin
-    $dumpfile("mealy_1101_overlap.vcd");
+    $dumpfile("mealy_1101_nooverlap.vcd");
     $dumpvars;
     $monitor ("TIME = %0t | CLK = %b | RST = %b | STATE = %b | NEXT_STATE = %b | X = %b | Y = %b " , $time,clk,rst,uut.state,uut.next_state,x,y);
     x = 0;
