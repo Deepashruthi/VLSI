@@ -72,7 +72,6 @@ module bin2bcd(
   end
 
   always @(*) begin
-    next_state = state; 
     case (state)
       IDLE: begin
         if(start) 
