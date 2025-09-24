@@ -13,8 +13,13 @@ module divby5 (
     reg [2:0] state, next_state;
 
    always @(posedge clk or posedge rst) begin
-        if (rst) begin                                                                                                                                                  state <= S0;                                                                                                                                            end else begin
-            state <= next_state;                                                                                                                                    end                                                                                                                                                     end
+        if (rst) begin                                                                                                                                                  
+            state <= S0;                                                                                                                                            
+        end 
+       else begin
+            state <= next_state;                                                                         
+        end     
+   end
 
     always @(*) begin
         case (state)
