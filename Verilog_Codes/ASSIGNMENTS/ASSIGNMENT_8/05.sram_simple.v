@@ -56,7 +56,7 @@ module sram_controller_simple(
 		     IDLE:  ready <= 1;
 		     READ: begin
 			     ready <= 0;
-                             sram_addr <= addr_in;
+                 sram_addr <= addr_in;
 			     sram_ce <= 1;
 			     sram_oe <= 1;
 			     sram_we <= 0;
